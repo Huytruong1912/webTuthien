@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("BG2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 4rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+        }
+        .navbar-nav .nav-link {
+            color: #007bff;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            font-family: 'Lora', serif;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff6f00;
+            text-decoration: underline;
+        }
+        .video {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+            padding: 1rem;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer h3 {
+            margin: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">WEB QUYÊN GÓP TỪ THIỆN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="thongtin.html">Thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="login-count-link" href="#">Số người đăng nhập</a>
+                    </li>
+                    <li class="nav-item" id="login-link">
+                        <a class="nav-link" href="register.html">Đăng ký</a>
+                    </li>
+                    <li class="nav-item" id="login-link">
+                        <a class="nav-link" href="dangnhap.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item d-none" id="logout-link">
+                        <a class="nav-link" href="#" id="logout">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">Giúp Đỡ Những Người Có Hoàn Cảnh Khó Khăn</h1>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <video class="video" controls>
+                    <source src="vd1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-md-6 mb-4">
+                <video class="video" controls>
+                    <source src="vd2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <h1 class="text-center">Tấm Lòng Nhỏ Hạnh Phúc To</h1>
+        <div class="row">
+            <div class="row">
+                <!-- First image on the left with space on the right -->
+                <div class="col-md-6 mb-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <img class="image" src="a1.jpg" alt="Image 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 d-flex align-items-center justify-content-center">
+                    <p class="text-center">Description for Image 1</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Space on the left with fourth image on the right -->
+                <div class="col-md-6 mb-4 d-flex align-items-center justify-content-center">
+                    <p class="text-center">Description for Image 4</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <img class="image" src="a4.jpg" alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center">Những mảnh đời bất hạnh</h1>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img class="image" src="b1.jpg" alt="Image 5">
+                    <p class="text-center">
+                        Người phụ nữ vô gia cư : Cô Mai, một người phụ nữ vô gia cư, đã mất nhà cửa sau khi chồng bỏ đi. 
+                        Cô sống nhờ vào việc bán vé số và sự giúp đỡ của những người hảo tâm.
+                    </p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img class="image" src="b2.jpg" alt="Image 6">
+                    <p class="text-center">
+                        Người phụ nữ bán hàng rong : Bà Lan, một người phụ nữ bán hàng rong, phải nuôi hai con nhỏ sau khi chồng qua đời. 
+                        Bà làm việc từ sáng sớm đến tối khuya để kiếm tiền nuôi con
+                    </p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img class="image" src="b3.jpg" alt="Image 7">
+                    <p class="text-center">
+                        Người đàn ông tàn tật : Anh Hùng, một người tàn tật, bị mất cả hai chân trong một tai nạn lao động. 
+                        Anh sống nhờ vào việc bán vé số và sự giúp đỡ của cộng đồng
+                    </p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img class="image" src="b4.jpg" alt="Image 8">
+                    <p class="text-center">
+                        Người vô gia cư ngủ trên vỉa hè : Chú Tâm, một người vô gia cư, đã sống trên vỉa hè suốt 5 năm qua. 
+                        Mỗi ngày, chú phải đối mặt với cái lạnh và đói khát, nhưng vẫn luôn giữ nụ cười trên môi
+                    </p>
+                </div>
+            </div>
+    </div>
+    <footer>
+        <h3 class="text-center">Website Từ Thiện Giúp Đỡ Người Khó Khăn!</h3>
+    </footer>
+    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passwordModalLabel">Nhập Mật Khẩu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="password" id="passwordInput" class="form-control" placeholder="Mật khẩu">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="submitPassword">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('login-count-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            var passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'), {
+                keyboard: false
+            });
+            passwordModal.show();
+        });
+
+        document.getElementById('submitPassword').addEventListener('click', function() {
+            var password = document.getElementById('passwordInput').value;
+            if (password === 'tinhthuong') { // Replace 'tinhthuong' with your actual password
+                window.location.href = 'login-count.html';
+            } else {
+                alert('Mật khẩu không đúng!');
+            }
+        });
+    </script>
+</body>
+</html>

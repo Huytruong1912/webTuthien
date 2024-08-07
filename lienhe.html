@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("BG2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 4rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+        }
+        .navbar-nav .nav-link {
+            color: #007bff;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            font-family: 'Lora', serif;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff6f00;
+            text-decoration: underline;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+            padding: 1rem;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer h3 {
+            margin: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+        .contact-form {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">WEB QUYÊN GÓP TỪ THIỆN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="thongtin.html">Thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login-count.html">Số người đăng nhập</a>
+                    </li>
+                    <li class="nav-item" id="login-link">
+                        <a class="nav-link" href="register.html">Đăng ký</a>
+                    </li>
+                    <li class="nav-item" id="login-link">
+                        <a class="nav-link" href="dangnhap.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item d-none" id="user-greeting">
+                        <a class="nav-link" href="#">Xin chào, <span id="username"></span></a>
+                    </li>
+                    <li class="nav-item d-none" id="logout-link">
+                        <a class="nav-link" href="#" id="logout">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">Liên Hệ Với Chúng Tôi</h1>
+        <div class="contact-form">
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Tên của bạn</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nhập tên của bạn" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email của bạn</label>
+                    <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Tin nhắn của bạn</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Nhập tin nhắn của bạn" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <h3 class="text-center">Website Từ Thiện Giúp Đỡ Người Khó Khăn!</h3>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
