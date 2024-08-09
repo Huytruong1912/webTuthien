@@ -151,123 +151,207 @@
         </table>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Check if there's existing data in localStorage, otherwise initialize with default data
-            if (!localStorage.getItem('users')) {
-                const initialUsers = [
-                    { username: 'truonghuy220720@gmail.com' },
-                    { username: 'user2' },
-                    { username: 'user3' }
-                ];
-                localStorage.setItem('users', JSON.stringify(initialUsers));
-                localStorage.setItem('loginCount', initialUsers.length);
-            }
+         document.addEventListener("DOMContentLoaded", function() {
+    // Nếu localStorage chưa có dữ liệu, khởi tạo với dữ liệu đã cho
+    if (!localStorage.getItem('users1')) {
+        const initialUsers = [
+            { username: 'huypro@gmail.com', password: '123456' },
+            { username: 'congtinh@gmail.com', password: 'password1' },
+            { username: 'congdanh@gmail.com', password: 'password2' },
+            { username: 'cong@gmail.com', password: 'password3' },
+            { username: 'congchinh@gmail.com', password: 'password4' },
+            { username: 'thuan@gmail.com', password: '123456' },
+            { username: 'nguyenminh123.@gmail.com', password: 'password5' },
+            { username: 'lequyen456@gmail.com', password: 'password6' },
+            { username: 'tranthanh789@gmail.com', password: 'password7' },
+            { username: 'doanthao987@gmail.com', password: 'password8' },
+            { username: 'phamminh321@gmail.com', password: 'password9' },
+            { username: 'buithu678@gmail.com', password: 'password10' },
+            { username: 'nguyentran999@gmail.com', password: 'password11' },
+            { username: 'lehoa111@gmail.com', password: 'password12' },
+            { username: 'doankhanh222@gmail.com', password: 'password13' },
+            { username: 'hoangphuong333@gmail.com', password: 'password14' },
+            { username: 'phamquoc444@gmail.com', password: 'password15' },
+            { username: 'buiduc555@gmail.com', password: 'password16' },
+            { username: 'nguyenthuy666@gmail.com', password: 'password17' },
+            { username: 'ledang777@gmail.com', password: 'password18' },
+            { username: 'tranmai888@gmail.com', password: 'password19' },
+            { username: 'doanlam999@gmail.com', password: 'password20' },
+            { username: 'hoangviet000@gmail.com', password: 'password21' },
+            { username: 'phamkhanh999@gmail.com', password: 'password22' },
+            { username: 'buithanh888@gmail.com', password: 'password23' },
+            { username: 'nguyenduc777@gmail.com', password: 'password24' },
+            { username: 'letrung666@gmail.com', password: 'password25' },
+            { username: 'doanphuong555@gmail.com', password: 'password26' },
+            { username: 'hoangmai444@gmail.com', password: 'password27' },
+            { username: 'phamhoa333@gmail.com', password: 'password28' },
+            { username: 'buiquyen222@gmail.com', password: 'password29' },
+            { username: 'nguyenkhanh111@gmail.com', password: 'password30' },
+            { username: 'lehieu000@gmail.com', password: 'password31' },
+            { username: 'doanthanh999@gmail.com', password: 'password32' },
+            { username: 'hoangthu888@gmail.com', password: 'password33' },
+            { username: 'phamkim777@gmail.com', password: 'password34' },
+            { username: 'buiviet666@gmail.com', password: 'password35' },
+            { username: 'nguyendang555@gmail.com', password: 'password36' },
+            { username: 'leduc444@gmail.com', password: 'password37' },
+            { username: 'doanquyen333@gmail.com', password: 'password38' },
+            { username: 'hoangminh222@gmail.com', password: 'password39' },
+            { username: 'phamhieu111@gmail.com', password: 'password40' },
+            { username: 'buimanh000@gmail.com', password: 'password41' },
+            { username: 'nguyentrung999@gmail.com', password: 'password42' },
+            { username: 'ledanh888@gmail.com', password: 'password43' },
+            { username: 'doanhoang777@gmail.com', password: 'password44' },
+            { username: 'hoangkim666@gmail.com', password: 'password45' },
+            { username: 'phamthu555@gmail.com', password: 'password46' },
+            { username: 'buiquoc444@gmail.com', password: 'password47' },
+            { username: 'nguyenthuy333@gmail.com', password: 'password48' },
+            { username: 'lenam222@gmail.com', password: 'password49' },
+            { username: 'doanhoa111@gmail.com', password: 'password50' },
+            { username: 'hoanghieu000@gmail.com', password: 'password51' },
+            { username: 'phamviet999@gmail.com', password: 'password52' },
+            { username: 'nguyenkim777@gmail.com', password: 'password53' },
+            { username: 'hoangtrung444@gmail.com', password: 'password54' },
+            { username: 'lequoc666@gmail.com', password: 'password55' },
+            { username: 'phamduong333@gmail.com', password: 'password56' },
+            { username: 'nguyenthai111@gmail.com', password: 'password57' },
+            { username: 'letrang000@gmail.com', password: 'password58' },
+            { username: 'doanphuc999@gmail.com', password: 'password59' },
+            { username: 'phamly777@gmail.com', password: 'password60' },
+            { username: 'hoangduy888@gmail.com', password: 'password61' },
+            { username: 'nguyendao555@gmail.com', password: 'password62' },
+            { username: 'lethanh444@gmail.com', password: 'password63' },
+            { username: 'hoangbach222@gmail.com', password: 'password64' },
+            { username: 'phambinh111@gmail.com', password: 'password65' },
+            { username: 'buidat000@gmail.com', password: 'password66' },
+            { username: 'nguyenvinh999@gmail.com', password: 'password67' },
+            { username: 'lebinh888@gmail.com', password: 'password68' },
+            { username: 'doanhieu777@gmail.com', password: 'password69' },
+            { username: 'phamtuan555@gmail.com', password: 'password70' },
+            { username: 'buiphuc444@gmail.com', password: 'password71' },
+            { username: 'nguyenchinh333@gmail.com', password: 'password72' },
+            { username: 'hoangtu000@gmail.com', password: 'password73' },
+            { username: 'phambao999@gmail.com', password: 'password74' },
+            { username: 'doanquoc111@gmail.com', password: 'password75' },
+            { username: 'hoangchinh444@gmail.com', password: 'password76' },
+            { username: 'nguyenviet111@gmail.com', password: 'password77' },
+            { username: 'doanbao999@gmail.com', password: 'password78' },
+            { username: 'phamquynh111@gmail.com', password: 'password79' },
+            { username: 'truonghuy220720@gmail.com', password: 'password80' },
+            { username: 'ngoctrinh@gmail.com', password: '123456' },
+            { username: 'ngoclan@gmail.com', password: '123456' },
+            { username: 'viettan@gmail.com', password: '123456' }
+        ];
+        localStorage.setItem('users1', JSON.stringify(initialUsers));
+        localStorage.setItem('loginCount', initialUsers.length);
+    }
 
-            // Display login count
-            let loginCount = parseInt(localStorage.getItem('loginCount'));
+    // Hiển thị số lượng người dùng đã đăng nhập
+    let loginCount = parseInt(localStorage.getItem('loginCount'));
+    document.getElementById('login-count').innerText = loginCount;
+
+    // Hiển thị danh sách người dùng
+    let users = JSON.parse(localStorage.getItem('users'));
+    let accountList = document.getElementById('account-list');
+
+    function updateUserList() {
+        accountList.innerHTML = "";
+        users.forEach((user, index) => {
+            let row = document.createElement('tr');
+            let idCell = document.createElement('td');
+            let nameCell = document.createElement('td');
+            let actionCell = document.createElement('td');
+            let deleteButton = document.createElement('button');
+
+            idCell.innerText = index + 1;
+            nameCell.innerText = user.username;
+
+            deleteButton.innerText = 'Xóa';
+            deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
+            deleteButton.onclick = function() {
+                users.splice(index, 1);
+                localStorage.setItem('users1', JSON.stringify(users));
+
+                // Cập nhật số lượng đăng nhập
+                loginCount -= 1;
+                localStorage.setItem('loginCount', loginCount);
+                document.getElementById('login-count').innerText = loginCount;
+
+                // Cập nhật danh sách người dùng
+                updateUserList();
+            };
+
+            actionCell.appendChild(deleteButton);
+            row.appendChild(idCell);
+            row.appendChild(nameCell);
+            row.appendChild(actionCell);
+            accountList.appendChild(row);
+        });
+    }
+    updateUserList();
+
+    // Thêm người dùng mới
+    document.getElementById('add-user-btn').addEventListener('click', function() {
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        if (username && password) {
+            users.push({ username, password });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            // Tăng số lượng đăng nhập
+            loginCount += 1;
+            localStorage.setItem('loginCount', loginCount);
             document.getElementById('login-count').innerText = loginCount;
 
-            // Display user list
-            let users = JSON.parse(localStorage.getItem('users'));
-            let accountList = document.getElementById('account-list');
-            
-            function updateUserList() {
-                accountList.innerHTML = "";
-                users.forEach((user, index) => {
-                    let row = document.createElement('tr');
-                    let idCell = document.createElement('td');
-                    let nameCell = document.createElement('td');
-                    let actionCell = document.createElement('td');
-                    let deleteButton = document.createElement('button');
-
-                    idCell.innerText = index + 1;
-                    nameCell.innerText = user.username;
-
-                    deleteButton.innerText = 'Xóa';
-                    deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
-                    deleteButton.onclick = function() {
-                        users.splice(index, 1);
-                        localStorage.setItem('users', JSON.stringify(users));
-
-                        // Update login count
-                        loginCount -= 1;
-                        localStorage.setItem('loginCount', loginCount);
-                        document.getElementById('login-count').innerText = loginCount;
-
-                        // Update user list
-                        updateUserList();
-                    };
-
-                    actionCell.appendChild(deleteButton);
-                    row.appendChild(idCell);
-                    row.appendChild(nameCell);
-                    row.appendChild(actionCell);
-                    accountList.appendChild(row);
-                });
-            }
+            // Cập nhật danh sách người dùng
             updateUserList();
 
-            // Add new user
-            document.getElementById('add-user-btn').addEventListener('click', function() {
-                let username = document.getElementById('username').value;
-                if (username) {
-                    users.push({ username });
-                    localStorage.setItem('users', JSON.stringify(users));
+            // Xóa trường nhập liệu sau khi thêm
+            document.getElementById('username').value = "";
+            document.getElementById('password').value = "";
+        } else {
+            alert("Vui lòng nhập đầy đủ thông tin tài khoản");
+        }
+    });
 
-                    // Increment login count
-                    loginCount += 1;
-                    localStorage.setItem('loginCount', loginCount);
-                    document.getElementById('login-count').innerText = loginCount;
+    // Tìm kiếm người dùng
+    document.getElementById('search-user').addEventListener('input', function() {
+        let searchQuery = document.getElementById('search-user').value.toLowerCase();
+        let filteredUsers = users.filter(user => user.username.toLowerCase().includes(searchQuery));
+        accountList.innerHTML = "";
+        filteredUsers.forEach((user, index) => {
+            let row = document.createElement('tr');
+            let idCell = document.createElement('td');
+            let nameCell = document.createElement('td');
+            let actionCell = document.createElement('td');
+            let deleteButton = document.createElement('button');
 
-                    // Update user list
-                    updateUserList();
+            idCell.innerText = index + 1;
+            nameCell.innerText = user.username;
 
-                    // Clear input field
-                    document.getElementById('username').value = "";
-                } else {
-                    alert("Vui lòng nhập tên tài khoản");
-                }
-            });
+            deleteButton.innerText = 'Xóa';
+            deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
+            deleteButton.onclick = function() {
+                let userIndex = users.indexOf(user);
+                users.splice(userIndex, 1);
+                localStorage.setItem('users1', JSON.stringify(users));
 
-            // Search for users
-            document.getElementById('search-user').addEventListener('input', function() {
-                let searchQuery = document.getElementById('search-user').value.toLowerCase();
-                let filteredUsers = users.filter(user => user.username.toLowerCase().includes(searchQuery));
-                accountList.innerHTML = "";
-                filteredUsers.forEach((user, index) => {
-                    let row = document.createElement('tr');
-                    let idCell = document.createElement('td');
-                    let nameCell = document.createElement('td');
-                    let actionCell = document.createElement('td');
-                    let deleteButton = document.createElement('button');
+                // Cập nhật số lượng đăng nhập
+                loginCount -= 1;
+                localStorage.setItem('loginCount', loginCount);
+                document.getElementById('login-count').innerText = loginCount;
 
-                    idCell.innerText = index + 1;
-                    nameCell.innerText = user.username;
+                // Cập nhật danh sách người dùng
+                updateUserList();
+            };
 
-                    deleteButton.innerText = 'Xóa';
-                    deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
-                    deleteButton.onclick = function() {
-                        let userIndex = users.indexOf(user);
-                        users.splice(userIndex, 1);
-                        localStorage.setItem('users', JSON.stringify(users));
-
-                        // Update login count
-                        loginCount -= 1;
-                        localStorage.setItem('loginCount', loginCount);
-                        document.getElementById('login-count').innerText = loginCount;
-
-                        // Update user list
-                        updateUserList();
-                    };
-
-                    actionCell.appendChild(deleteButton);
-                    row.appendChild(idCell);
-                    row.appendChild(nameCell);
-                    row.appendChild(actionCell);
-                    accountList.appendChild(row);
-                });
-            });
+            actionCell.appendChild(deleteButton);
+            row.appendChild(idCell);
+            row.appendChild(nameCell);
+            row.appendChild(actionCell);
+            accountList.appendChild(row);
         });
+    });
+});
     </script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
